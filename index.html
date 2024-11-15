@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal de Opciones</title>
+    <style>
+        nav {
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, .5);
+            
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+            font-size: xx-large;
+            padding: 10px;
+
+        }
+        
+        body {
+            background-image: url("recursos/imagenes/imagen4.webp");
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: cadetblue;
+            width: 20%;
+        }
+
+        .divPapa {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .divPapa>div {
+            width: 25%;
+            margin: 0 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-large;
+            background-color: rgba(255, 255, 255, .5);      
+        }
+
+        .divPapa p {
+            width: 100%;
+        }
+
+        img{
+           margin-right: -200px; 
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    
+
+    <img src="recursos/imagenes/icono4.png" alt="" style="margin-bottom: -200px; margin-top: -80px;" >
+    <h1 style="color: aliceblue; text-align: center; font-size: 50px;">Bienvenido al Gestor de la Universidad de Cecar</h1>
+
+    <div class="nav">
+        <nav>
+            <img src="recursos/imagenes/icono1.png" alt="" width="50px">
+            <a href="html/crudestudiantes.html" target="_blank">Gestión de Estudiantes</a>
+            <img src="recursos/imagenes/icono3.png" alt="" width="50px">
+            <a href="html/crudprogramasacademicos.html" target="_blank">Gestión de Programas Academicos</a>
+            <img src="recursos/imagenes/icono2.png" alt="" width="50px">
+            <a href="html/crudmatriculas.html" target="_blank">Gestión de Matriculas</a>
+        </nav>
+    </div>
+
+    <div class="divPapa">
+        <div class="p1">
+            <p>
+                El sistema debe permitir gestionar la información de los estudiantes inscritos. Se requiere almacenar los siguientes datos para cada estudiante:
+                </p>
+                <ul>
+                    <li>Identificación del estudiante (Número único alfanumérico) - Obligatorio y único para cada estudiante.</li>
+                    <li>Nombre completo - Obligatorio y con validación de caracteres alfabéticos únicamente.</li>
+                    <li>Fecha de nacimiento - Obligatorio y debe ser válida (no permite fechas futuras).</li>
+                    <li>Correo electrónico - Obligatorio y debe cumplir con el formato de correo electrónico (Ejemplo: ejemplo@dominio.com).</li>
+                    <li>Teléfono - Opcional, pero si se ingresa, debe ser numérico y tener entre 8 y 15 dígitos.</li>
+                </ul>
+        </div>
+        <div class="p2">
+            <p>
+                El sistema debe permitir gestionar los programas académicos disponibles para los estudiantes. Se requiere almacenar la siguiente información para cada programa:</p>
+                <ul>
+                    <li>Código del programa (alfanumérico único) - Obligatorio y único para cada programa.</li>
+                    <li>Nombre del programa - Obligatorio y no puede repetirse en la lista de programas.</li>
+                    <li>Duración (en semestres) - Obligatorio y debe ser un valor numérico positivo.</li>
+                    <li>Modalidad (presencial, virtual, semipresencial) - Obligatorio y debe seleccionarse de una lista predefinida de opciones.</li>
+                    <li>Fecha de inicio - Opcional, pero si se ingresa, debe ser una fecha pasada o actual.</li>
+                </ul>
+        </div>
+        <div class="p3">
+            <p>
+                El sistema debe permitir registrar la matrícula de estudiantes en los programas académicos. Cada matrícula debe asociar a un estudiante con un programa, incluyendo los siguientes datos:
+            </p>
+            <ul>
+                <li>Identificación de matrícula (Número único alfanumérico) - Obligatorio y único para cada matrícula.</li>
+                <li>Identificación del estudiante - Obligatorio y debe corresponder a un estudiante registrado en el sistema.</li>
+                <li>Código del programa - Obligatorio y debe corresponder a un programa registrado en el sistema.</li>
+                <li>Fecha de matrícula - Obligatorio y debe ser una fecha actual o futura.</li>
+                <li>Estado de la matrícula (activa, en proceso, finalizada, cancelada) - Obligatorio y debe seleccionarse de una lista predefinida.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

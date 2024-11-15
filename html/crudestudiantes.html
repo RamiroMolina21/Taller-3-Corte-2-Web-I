@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes</title>
+    <script src="../js/estudiante.js"></script>
+    <script src="../js/gestionestudiantes.js"></script>
+    <script src="../js/utilidades1.js"></script>
+    <link rel="stylesheet" href="../css/styleestudiantes.css">
+</head>
+
+<body>
+
+    <div class="nav1">
+        <nav>
+            <img src="../recursos/imagenes/icono4.png" alt=""
+                style="position: fixed; margin-top: -110px; margin-left: -500px;">
+            <ul>
+                <img src="../recursos/imagenes/icono1.png" alt="" width="50px">
+                <li><a href="../html/crudestudiantes.html" target="_blank">Gestión de Estudiantes</a></li>
+                <img src="../recursos/imagenes/icono3.png" alt="" width="50px">
+                <li><a href="../html/crudprogramasacademicos.html" target="_blank">Gestión de Programas Académicos</a>
+                </li>
+                <img src="../recursos/imagenes/icono2.png" alt="" width="50px">
+                <li><a href="../html/crudmatriculas.html" target="_blank">Gestión de Matrículas</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="gridContainer">
+        <div class="divForm">
+            <h1 style="color: black; font-family: sans-serif;">Gestión de Estudiantes</h1>
+            <form action="">
+                <label for="">Identificacion</label>
+                <input type="text" placeholder="1193079634" id="identificacionEstudiante" required>
+
+                <label for="">Nombre Completo</label>
+                <input type="text" placeholder="Ramiro Molina" id="nombreCompleto" required>
+
+                <label for="">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimiento" value="1900-01-01" min="1900-01-01" max="2024-11-15" required>
+
+
+                <label for="">Correo Electronico</label>
+                <input type="email" placeholder="ejemplo@hotmail.com" id="email" required>
+
+                <label for="">Telefono</label>
+                <input type="number" placeholder="3108452615" pattern="\d{8,15}$" id="telefono">
+            </form>
+        </div>
+
+        <div class="divButton">
+
+            <button onclick="guardar()">Guardar</button>
+            <button onclick="actualizar()">Actualizar</button>
+            <button onclick="eliminar()">Eliminar</button>
+            <button onclick="consultar()">Consultar</button>
+            <button onclick="limpiarFormulario()">Nuevo</button>
+
+        </div>
+
+        <div class="tabla" style="margin-top: 20px; border: solid 3px;">
+            <table id="tablaEstudiantes">
+                <thead>
+                    <tr>
+                        <th>Identificación Estudiante</th>
+                        <th>Nombre Estudiante</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Correo Electronico</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

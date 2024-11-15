@@ -1,0 +1,98 @@
+.gridContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border:  solid 1px;
+    width: 600px;
+    padding: 10px;
+    background: rgba(255, 255, 255, .7);
+    margin-top: 60px;  
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../recursos/imagenes/imagen1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+form{
+    display: grid;
+    gap: 10px;
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#000;
+}
+
+input{
+    color: #000;
+}
+
+.divButton{
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button{
+    color:white;
+    background-color: lightslategray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    transition-duration: 0.4s;
+    height: 30px;
+}
+
+button:hover{
+    background-color: thistle;
+    color: #000;
+
+}
+
+.nav1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    position: fixed; /* Fija el nav en la parte superior */
+    top: 0; /* Posiciónalo en la parte superior de la pantalla */
+    z-index: 10; /* Asegura que esté en la parte superior del contenido */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+
+
+
+

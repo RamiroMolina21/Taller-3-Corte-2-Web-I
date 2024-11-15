@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Matrículas</title>
+    <link rel="stylesheet" href="../css/stylematriculas.css">
+    <script src="../js/matricula.js"></script>
+    <script src="../js/gestionmatricula.js"></script>
+    <script src="../js/utilidades1.js"></script>
+
+</head>
+<body>
+
+    <div class="nav1">
+        <nav>
+            <img src="../recursos/imagenes/icono4.png" alt=""
+                style="position: fixed; margin-top: -110px; margin-left: -500px;">
+
+            <ul>
+                <img src="../recursos/imagenes/icono1.png" alt="" width="50px">
+                <li><a href="../html/crudestudiantes.html" target="_blank">Gestión de Estudiantes</a></li>
+                <img src="../recursos/imagenes/icono3.png" alt="" width="50px">
+                <li><a href="../html/crudprogramasacademicos.html" target="_blank">Gestión de Programas Académicos</a>
+                </li>
+                <img src="../recursos/imagenes/icono2.png" alt="" width="50px">
+                <li><a href="../html/crudmatriculas.html" target="_blank">Gestión de Matrículas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="gridContainer">
+        <div class="divForm">
+            <h1 style="color: black; font-family: sans-serif;">Gestión de Matrículas Académicas</h1>
+            <form action="">
+                <label for="">Identificación Matrícula</label>
+                <input type="text" placeholder="1123" id="idMatricula" required>
+
+                <label for="identificacionEstudiante">Identificación del Estudiante</label>
+                <select name="" id="identificacionEstudiante" required>
+                    
+                </select>
+
+                <label for="codigoPrograma">Código Programa</label>
+                <select name="" id="codigoPrograma" required>
+                    
+                </select>
+
+                <label for="">Fecha Matrícula</label>
+                <input type="date" id="fechaMatricula" value="2024-11-15" min="2024-11-15" max="2027-01-01">
+
+                <label for="estado">Estado Matrícula</label>
+                <input list="estados" id="estado" placeholder="Activa-En Proceso-Finalizada-Cancelada" required>
+                <datalist id="estados">
+                    <option value="Activa"></option>
+                    <option value="En proceso"></option>
+                    <option value="Finalizada"></option>
+                    <option value="Cancelada"></option>
+                </datalist>
+            </form>
+        </div>
+
+        <div class="divButton">
+            <button onclick="guardarMatricula()">Guardar</button>
+            <button onclick="actualizarMatricula()">Actualizar</button>
+            <button onclick="eliminarMatricula()">Eliminar</button>
+            <button onclick="consultarMatricula()">Consultar</button>
+            <button onclick="limpiarFormularioMatricula()">Nuevo</button>
+        </div>
+
+        <div class="tablaMatriculas" style="margin-top: 20px; border: solid 3px;">
+            <table id="tablaMatriculas">
+                <thead>
+                    <tr>
+                        <th>Identificación Matricula</th>
+                        <th>Nombre Estudiante</th>
+                        <th>Código Programa</th>
+                        <th>Fecha Matricula</th>
+                        <th>Estado Matricula </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+
+    
+
+
+</body>                           
+
+</html>

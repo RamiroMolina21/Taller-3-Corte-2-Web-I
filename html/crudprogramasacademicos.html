@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Programas Académicos</title>
+    <link rel="stylesheet" href="../css/styleprogramasacademicos.css">
+    <script src="../js/programaacademico.js"></script>
+    <script src="../js/gestionprogramas.js"></script>
+    <script src="../js/utilidades1.js"></script>
+</head>
+
+<body>
+
+    <div class="nav1">
+        <nav>
+            <img src="../recursos/imagenes/icono4.png" alt=""
+                style="position: fixed; margin-top: -110px; margin-left: -500px;">
+
+            <ul>
+                <img src="../recursos/imagenes/icono1.png" alt="" width="50px">
+                <li><a href="../html/crudestudiantes.html" target="_blank">Gestión de Estudiantes</a></li>
+                <img src="../recursos/imagenes/icono3.png" alt="" width="50px">
+                <li><a href="../html/crudprogramasacademicos.html" target="_blank">Gestión de Programas Académicos</a>
+                </li>
+                <img src="../recursos/imagenes/icono2.png" alt="" width="50px">
+                <li><a href="../html/crudmatriculas.html" target="_blank">Gestión de Matrículas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="gridContainer">
+        <div class="divForm">
+            <h1 style="color: black; font-family: sans-serif;">Gestión de Programas Académicos</h1>
+            <form action="">
+                <label for="">Código del Programa</label>
+                <input type="number" placeholder="1123" id="codigoPrograma" required>
+
+                <label for="">Nombre Programa</label>
+                <input type="text" placeholder="Web I" id="nombrePrograma" required>
+
+                <label for="">Duracion Programa</label>
+                <input type="number" placeholder="Numero de Semestres" id="duracion" required>
+
+                <label for="modalidad">Modalidad</label>
+                <input list="modalidades" id="modalidad" placeholder="presencial-virtual-semi" required>
+                <datalist id="modalidades">
+                    <option value="Presencial">
+                    <option value="Virtual">
+                    <option value="Semi-Presencial">
+                </datalist>
+                <label for="">Fecha Inicio</label>
+                <input type="date" id="fechaInicio" value="2018-07-22" min="1900-01-01" max="2024-11-15">
+            </form>
+        </div>
+        <div class="divButton">
+            <button onclick="guardar()">Guardar</button>
+            <button onclick="actualizar()">Actualizar</button>
+            <button onclick="eliminar()">Eliminar</button>
+            <button onclick="consultar()">Consultar</button>
+            <button onclick="limpiarFormulario()">Nuevo</button>
+        </div>
+
+        <div class="tabla" style="margin-top: 20px; border: solid 3px;">
+            <table id="tablaProgramas">
+                <thead>
+                    <tr>
+                        <th>Codigo Programa</th>
+                        <th>Nombre</th>
+                        <th>Duracion</th>
+                        <th>Modalidad</th>
+                        <th>Fecha Inicio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
